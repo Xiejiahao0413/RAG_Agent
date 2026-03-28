@@ -1,0 +1,18 @@
+from langchain_community.embeddings import DashScopeEmbeddings 
+
+#初始化嵌入式模型对象，其默认使用模型为：text-embedding-v1
+embed = DashScopeEmbeddings()
+
+#测试
+print(embed.embed_query('我喜欢你'))
+print(embed.embed_documents(['我喜欢你','我稀饭你','晚上吃啥']))
+
+
+from langchain_ollama import OllamaEmbeddings 
+#初始化嵌入式模型对象，其默认使用模型为：text-embedding-v1
+embed = OllamaEmbeddings(model='qwen3-embedding')
+#测试
+print(embed.embed_query('我喜欢你'))
+print(embed.embed_documents(['我喜欢你','我稀饭你','晚上吃啥']))
+
+
